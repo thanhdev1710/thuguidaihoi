@@ -14,10 +14,6 @@ export const metadata: Metadata = {
     "Đại hội Đại biểu, Hội Liên hiệp Thanh niên, Thành phố Hồ Chí Minh, thư gửi, đại biểu thanh niên, nhiệm kỳ 2024-2029, Đại hội IX, sự kiện thanh niên, Việt Nam, hội nghị thanh niên",
   icons: {
     apple: "/images/icon.webp",
-    icon: [
-      { url: "/favicon-32x32.webp", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16x16.webp", sizes: "16x16", type: "image/png" },
-    ],
   },
   openGraph: {
     url: "https://thuguidaihoi.vercel.app/",
@@ -72,13 +68,16 @@ export default function RootLayout({
               src="/images/bg.webp"
               alt="Ảnh nền"
               fill
-              className="absolute w-full h-full"
+              objectFit="cover"
+              priority
+              className="absolute w-full h-full bg-cover object-cover"
             />
             <Image
               alt="Ảnh phụ"
               src="/images/topleft.webp"
               width={300}
               height={300}
+              priority
               className="absolute top-0 left-0 w-[18vw] h-auto"
             />
             <Image
@@ -86,6 +85,7 @@ export default function RootLayout({
               src="/images/topright.webp"
               width={300}
               height={300}
+              priority
               className="absolute top-0 right-0 w-[18vw] h-auto"
             />
             <Image
@@ -93,13 +93,15 @@ export default function RootLayout({
               src="/images/thugui.webp"
               width={400}
               height={400}
+              priority
               className="absolute md:top-[16%] md:left-[16%] md:w-[20vw] w-[clamp(160px,40vw,200px)] left-[10%] top-[40%] h-auto"
             />
             <Image
               alt="Ảnh thư gửi"
               src="/images/chaomung.webp"
-              width={400}
-              height={400}
+              width={600}
+              height={600}
+              priority
               className="absolute md:top-[12%] md:right-[12%] md:w-[43vw] top-2 max-md:left-1/2 max-md:-translate-x-1/2 w-[70%] h-auto"
             />
 
@@ -110,6 +112,7 @@ export default function RootLayout({
               src="/images/bottomleft.webp"
               width={300}
               height={300}
+              priority
               className="absolute bottom-0 left-0 w-[29vw] h-auto"
             />
             <Image
@@ -117,6 +120,7 @@ export default function RootLayout({
               src="/images/bottomright.webp"
               width={300}
               height={300}
+              priority
               className="absolute bottom-0 right-0 w-[29vw] h-auto"
             />
             <Image
@@ -124,6 +128,7 @@ export default function RootLayout({
               src="/images/bottomline.webp"
               width={900}
               height={900}
+              priority
               className="absolute bottom-0 left-0 w-full"
             />
           </main>
