@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "Đại hội Đại biểu Hội Liên hiệp Thanh niên Việt Nam",
+  "short_name": "Hội Liên hiệp Thanh niên",
   "icons": [
     {
       "src": "/images/icon.png",
@@ -15,5 +15,7 @@
   ],
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
-  "display": "standalone"
+  "display": "standalone",
+  "description": "Chuyên trang thư gửi Đại hội Đại biểu Hội Liên hiệp Thanh niên Việt Nam - Thành phố Hồ Chí Minh lần thứ IX, nhiệm kỳ 2024 – 2029",
+  "start_url": "/"
 }

@@ -10,6 +10,8 @@ export const metadata: Metadata = {
     "Đại hội Đại biểu Hội Liên hiệp Thanh niên Việt Nam - Thành phố Hồ Chí Minh",
   description:
     "Chuyên trang thư gửi Đại hội Đại biểu Hội Liên hiệp Thanh niên Việt Nam - Thành phố Hồ Chí Minh lần thứ IX, nhiệm kỳ 2024 – 2029",
+  keywords:
+    "Đại hội Đại biểu, Hội Liên hiệp Thanh niên, Thành phố Hồ Chí Minh, thư gửi, đại biểu thanh niên, nhiệm kỳ 2024-2029, Đại hội IX, sự kiện thanh niên, Việt Nam, hội nghị thanh niên",
   icons: {
     apple: "/images/icon.png",
     icon: [
@@ -18,7 +20,7 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    url: "https://thu-gui-dh.vercel.app/",
+    url: "https://thuguidaihoi.vercel.app/",
     type: "website",
     title:
       "Đại hội Đại biểu Hội Liên hiệp Thanh niên Việt Nam - Thành phố Hồ Chí Minh",
@@ -49,6 +51,7 @@ export const metadata: Metadata = {
     ],
   },
 };
+
 const pacifico = Pacifico({
   subsets: ["latin"],
   weight: ["400"],

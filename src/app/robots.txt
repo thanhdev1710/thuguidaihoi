@@ -1,0 +1,4 @@
+User-agent: *
+User-agent: Googlebot
+Allow: /
+Sitemap: https://thuguidaihoi.vercel.app/sitemap.xml
