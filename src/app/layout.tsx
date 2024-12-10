@@ -63,7 +63,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`antialiased ${pacifico.variable}`}>
         <FormProvider>
-          <main className="relative w-full h-[860px] max-md:h-[1100px]">
+          <main className="relative w-full text-black h-[860px] max-md:h-[1100px]">
             <Image
               src="/images/bg.webp"
               alt="Ảnh nền"
