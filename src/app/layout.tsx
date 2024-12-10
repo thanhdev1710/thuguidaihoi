@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     apple: "/images/icon.webp",
   },
   openGraph: {
-    url: "https://thuguidaihoi.vercel.app/",
+    url: "https://thuguidaihoidangbophuonghieptannhiemky2025-2030.vercel.app/",
     type: "website",
     title:
       "Đại hội Đại biểu Hội Liên hiệp Thanh niên Việt Nam - Thành phố Hồ Chí Minh",
