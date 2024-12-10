@@ -174,7 +174,7 @@ export default function FormSubmit() {
         {/* Nút submit */}
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white py-1 rounded hover:bg-blue-600"
+          className="w-full bg-blue-600 text-white py-1 rounded hover:bg-blue-700"
         >
           Xem trước
         </button>
