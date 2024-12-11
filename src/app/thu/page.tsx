@@ -60,7 +60,7 @@ export default function Page() {
     }
   };
 
-  const handleScreenShoot = async (image: string, name: string) => {
+  const handleScreenShoot = (image: string, name: string) => {
     // Tạo Blob từ data URL
     const byteString = atob(image.split(",")[1]);
     const ab = new ArrayBuffer(byteString.length);
@@ -71,32 +71,12 @@ export default function Page() {
 
     const blob = new Blob([ab], { type: "image/png" });
 
-    // Kiểm tra thiết bị đang sử dụng (mobile hay desktop)
-    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-    if (isMobile) {
-      // Nếu trên điện thoại, sử dụng Web Share API để chia sẻ ảnh
-      if (navigator.share) {
-        try {
-          await navigator.share({
-            files: [new File([blob], name, { type: "image/png" })],
-            title: "Chia sẻ ảnh",
-            text: "Mời bạn xem ảnh chụp màn hình",
-          });
-          console.log("Ảnh đã được chia sẻ thành công!");
-        } catch (error) {
-          console.error("Lỗi khi chia sẻ ảnh:", error);
-        }
-      } else {
-        console.error("Web Share API không được hỗ trợ trên thiết bị này.");
-      }
-    } else {
-      // Nếu trên desktop, tải ảnh về
-      const link = document.createElement("a");
-      link.href = URL.createObjectURL(blob);
-      link.download = name;
-      link.click();
-      console.log("Ảnh đã được tải xuống.");
-    }
+    // Tạo một URL cho Blob
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = name;
+    link.click();
+    URL.revokeObjectURL(link.href);
   };
 
   useEffect(() => {
