@@ -78,7 +78,7 @@ export default function UploadImg() {
               width={1000}
               height={1000}
               border={50}
-              borderRadius={300}
+              borderRadius={1000}
               scale={scale} // Đặt scale tùy theo giá trị
               className="mx-auto !w-[clamp(240px,40vw,360px)] !h-auto"
             />
