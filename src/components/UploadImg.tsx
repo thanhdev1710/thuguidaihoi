@@ -75,10 +75,12 @@ export default function UploadImg() {
             <AvatarEditor
               ref={refEditor}
               image={image!}
+              width={1000}
+              height={1000}
               border={50}
               borderRadius={300}
               scale={scale} // Đặt scale tùy theo giá trị
-              className="mx-auto w-full"
+              className="mx-auto !w-[clamp(240px,40vw,360px)] !h-auto"
             />
             <div className="mt-4 flex flex-col items-center gap-4">
               <div>
