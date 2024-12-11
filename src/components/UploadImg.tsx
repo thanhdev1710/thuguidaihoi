@@ -75,8 +75,8 @@ export default function UploadImg() {
             <AvatarEditor
               ref={refEditor}
               image={image!}
-              width={300}
-              height={300}
+              width={240}
+              height={240}
               border={50}
               borderRadius={300}
               scale={scale} // Đặt scale tùy theo giá trị
