@@ -63,7 +63,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`antialiased ${pacifico.variable}`}>
         <FormProvider>
-          <main className="relative w-full text-black h-[860px] max-md:h-[1100px]">
+          <main className="relative w-full text-black h-[860px] max-md:h-[1100px] overflow-hidden">
             <Image
               src="/images/bg.webp"
               alt="Ảnh nền"
@@ -94,7 +94,7 @@ export default function RootLayout({
               width={400}
               height={400}
               priority
-              className="absolute md:top-[16%] md:left-[16%] md:w-[20vw] w-[clamp(160px,40vw,200px)] left-[10%] top-[40%] h-auto"
+              className="absolute md:top-[16%] md:left-[16%] md:w-[20vw] w-[clamp(160px,40vw,200px)] left-[10%] top-[45%] h-auto"
             />
             <Image
               alt="Ảnh thư gửi"

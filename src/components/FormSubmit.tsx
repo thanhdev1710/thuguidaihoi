@@ -86,7 +86,7 @@ export default function FormSubmit() {
   };
 
   return (
-    <div className="absolute md:right-[6%] md:top-[36%] max-md:left-1/2 max-md:-translate-x-1/2 top-[48%] bg-white p-4 rounded shadow w-[80%] md:w-1/2 border">
+    <div className="absolute md:right-[6%] md:top-[36%] max-md:left-1/2 max-md:-translate-x-1/2 top-[54%] bg-white p-4 rounded shadow w-[80%] md:w-1/2 border">
       <form onSubmit={handleSubmit}>
         {/* Tên */}
         <div className="mb-3">
