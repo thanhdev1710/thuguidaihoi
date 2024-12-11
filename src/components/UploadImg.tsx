@@ -70,48 +70,59 @@ export default function UploadImg() {
         </div>
       </div>
       {isEditing && (
-        <div className="absolute z-50 top-[50%] left-[50%] transform -translate-x-[50%] -translate-y-[50%] bg-white p-4 rounded-lg shadow-lg">
-          <AvatarEditor
-            ref={refEditor}
-            image={image!}
-            width={300}
-            height={300}
-            border={50}
-            borderRadius={300}
-            scale={scale} // Đặt scale tùy theo giá trị
-          />
-          <div className="mt-4 flex flex-col items-center gap-4">
-            <div>
-              <label htmlFor="zoom" className="text-sm">
-                Zoom
-              </label>
-              <input
-                id="zoom"
-                type="range"
-                min="1.0"
-                max="2.0"
-                step="0.01"
-                value={scale}
-                onChange={handleScaleChange}
-                className="w-full"
-              />
-            </div>
-            <div className="flex justify-center gap-4">
-              <button
-                onClick={() => setIsEditing(false)}
-                className="px-4 py-2 bg-gray-500 text-white rounded-md"
-              >
-                Huỷ
-              </button>
-              <button
-                onClick={handleCrop}
-                className="px-4 py-2 bg-blue-500 text-white rounded-md"
-              >
-                Cắt
-              </button>
+        <>
+          <div className="absolute w-[80%] z-[80] top-[50%] left-[50%] transform -translate-x-[50%] -translate-y-[50%] bg-white p-4 rounded-lg shadow-lg">
+            <AvatarEditor
+              ref={refEditor}
+              image={image!}
+              width={360}
+              height={360}
+              border={50}
+              borderRadius={300}
+              scale={scale} // Đặt scale tùy theo giá trị
+              className="mx-auto"
+            />
+            <div className="mt-4 flex flex-col items-center gap-4">
+              <div>
+                <label htmlFor="zoom" className="text-sm">
+                  Zoom
+                </label>
+                <input
+                  id="zoom"
+                  type="range"
+                  min="1.0"
+                  max="2.0"
+                  step="0.01"
+                  value={scale}
+                  onChange={handleScaleChange}
+                  className="w-full"
+                />
+              </div>
+              <p className="text-xs text-red-700 text-wrap">
+                Nếu ảnh đã đúng vị trí, hãy nhấn &apos;Hủy&apos; để giữ nguyên
+                ảnh rõ nét. Nếu cắt ảnh, chất lượng ảnh có thể bị giảm.
+              </p>
+              <div className="flex justify-center gap-4">
+                <button
+                  onClick={() => setIsEditing(false)}
+                  className="px-4 py-2 bg-gray-500 text-white rounded-md"
+                >
+                  Huỷ
+                </button>
+                <button
+                  onClick={handleCrop}
+                  className="px-4 py-2 bg-blue-500 text-white rounded-md"
+                >
+                  Cắt
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+          <div
+            onClick={() => setIsEditing(false)}
+            className="absolute top-0 left-0 h-full w-full bg-black/70 z-[60]"
+          ></div>
+        </>
       )}
     </>
   );

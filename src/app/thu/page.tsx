@@ -57,6 +57,7 @@ export default function Page() {
       window.innerHeight = originalHeight;
 
       setIsLoading(false); // Tắt trạng thái loading
+      setIsCamera(false);
     }
   };
 
