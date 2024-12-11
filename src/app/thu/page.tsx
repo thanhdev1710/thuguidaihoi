@@ -61,8 +61,19 @@ export default function Page() {
   };
 
   const handleScreenShoot = (image: string, name: string) => {
+    // Tạo Blob từ data URL
+    const byteString = atob(image.split(",")[1]);
+    const ab = new ArrayBuffer(byteString.length);
+    const ia = new Uint8Array(ab);
+    for (let i = 0; i < byteString.length; i++) {
+      ia[i] = byteString.charCodeAt(i);
+    }
+
+    const blob = new Blob([ab], { type: "image/png" });
+
+    // Tạo một URL cho Blob
     const link = document.createElement("a");
-    link.href = image;
+    link.href = URL.createObjectURL(blob);
     link.download = name;
     link.click();
   };
