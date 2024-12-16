@@ -3,7 +3,7 @@ import "./globals.css";
 import { FormProvider } from "../context/FormContext";
 import { Toaster } from "react-hot-toast";
 import Image from "next/image";
-import { Pacifico } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 
 export const metadata: Metadata = {
   title:
@@ -48,10 +48,10 @@ export const metadata: Metadata = {
   },
 };
 
-const pacifico = Pacifico({
+const open_Sans = Open_Sans({
   subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-pacifico",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-open_Sans",
 });
 
 export default function RootLayout({
@@ -61,7 +61,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased ${pacifico.variable}`}>
+      <body className={`antialiased ${open_Sans.variable}`}>
         <FormProvider>
           <main className="relative w-full text-black min-h-svh h-[900px] max-md:h-[1100px] overflow-hidden">
             <Image
