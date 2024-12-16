@@ -7,11 +7,11 @@ import { Pacifico } from "next/font/google";
 
 export const metadata: Metadata = {
   title:
-    "Đại hội Đại biểu Hội Liên hiệp Thanh niên Việt Nam - Thành phố Hồ Chí Minh",
+    "Đại hội Đại biểu Đảng bộ phường Hiệp Tân lần thứ XV, nhiệm kỳ 2025-2030",
   description:
-    "Chuyên trang thư gửi Đại hội Đại biểu Hội Liên hiệp Thanh niên Việt Nam - Thành phố Hồ Chí Minh lần thứ IX, nhiệm kỳ 2024 – 2029",
+    "Chuyên trang Đại hội Đại biểu Đảng bộ phường Hiệp Tân lần thứ XV, nhiệm kỳ 2025-2030",
   keywords:
-    "Đại hội Đại biểu, Hội Liên hiệp Thanh niên, Thành phố Hồ Chí Minh, thư gửi, đại biểu thanh niên, nhiệm kỳ 2024-2029, Đại hội IX, sự kiện thanh niên, Việt Nam, hội nghị thanh niên",
+    "Đại hội Đại biểu, Đảng bộ phường Hiệp Tân, nhiệm kỳ 2025-2030, Đại hội XV, sự kiện Đảng bộ, Việt Nam, hội nghị Đảng bộ",
   icons: {
     apple: "/images/icon.png",
   },
@@ -19,30 +19,30 @@ export const metadata: Metadata = {
     url: "https://thuguidaihoidangbophuonghieptannhiemky2025-2030.vercel.app/",
     type: "website",
     title:
-      "Đại hội Đại biểu Hội Liên hiệp Thanh niên Việt Nam - Thành phố Hồ Chí Minh",
+      "Đại hội Đại biểu Đảng bộ phường Hiệp Tân lần thứ XV, nhiệm kỳ 2025-2030",
     description:
-      "Chuyên trang thư gửi Đại hội Đại biểu Hội Liên hiệp Thanh niên Việt Nam - Thành phố Hồ Chí Minh lần thứ IX, nhiệm kỳ 2024 – 2029",
+      "Chuyên trang Đại hội Đại biểu Đảng bộ phường Hiệp Tân lần thứ XV, nhiệm kỳ 2025-2030",
     images: [
       {
         url: "https://i.ibb.co/FKmCwsd/28-C25688-E51-D-4409-9-F1-B-B66691805439.jpg",
         width: 1200,
         height: 630,
-        alt: "Đại hội Đại biểu Hội Liên hiệp Thanh niên Việt Nam - Thành phố Hồ Chí Minh",
+        alt: "Đại hội Đại biểu Đảng bộ phường Hiệp Tân lần thứ XV, nhiệm kỳ 2025-2030",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Đại hội Đại biểu Hội Liên hiệp Thanh niên Việt Nam - Thành phố Hồ Chí Minh",
+      "Đại hội Đại biểu Đảng bộ phường Hiệp Tân lần thứ XV, nhiệm kỳ 2025-2030",
     description:
-      "Chuyên trang thư gửi Đại hội Đại biểu Hội Liên hiệp Thanh niên Việt Nam - Thành phố Hồ Chí Minh lần thứ IX, nhiệm kỳ 2024 – 2029",
+      "Chuyên trang Đại hội Đại biểu Đảng bộ phường Hiệp Tân lần thứ XV, nhiệm kỳ 2025-2030",
     images: [
       {
         url: "https://i.ibb.co/FKmCwsd/28-C25688-E51-D-4409-9-F1-B-B66691805439.jpg",
         width: 1200,
         height: 630,
-        alt: "Đại hội Đại biểu Hội Liên hiệp Thanh niên Việt Nam - Thành phố Hồ Chí Minh",
+        alt: "Đại hội Đại biểu Đảng bộ phường Hiệp Tân lần thứ XV, nhiệm kỳ 2025-2030",
       },
     ],
   },
@@ -68,9 +68,8 @@ export default function RootLayout({
               src="/images/bg.avif"
               alt="Ảnh nền"
               fill
-              objectFit="cover"
               priority
-              className="absolute w-full h-full z-[-2]"
+              className="absolute w-full h-full  object-cover"
             />
             <Image
               alt="Ảnh phụ"
@@ -78,7 +77,7 @@ export default function RootLayout({
               width={300}
               height={300}
               priority
-              className="absolute top-0 left-0 z-[-1] w-[clamp(80px,10vw,200px)] h-auto"
+              className="absolute top-0 left-0 w-[clamp(80px,10vw,200px)] h-auto"
             />
             <Image
               alt="Ảnh phụ"
@@ -86,7 +85,7 @@ export default function RootLayout({
               width={300}
               height={300}
               priority
-              className="absolute top-0 right-0 z-[-1] w-[clamp(80px,10vw,200px)] h-auto scale-x-[-1]"
+              className="absolute top-0 right-0 w-[clamp(80px,10vw,200px)] h-auto scale-x-[-1]"
             />
             <Image
               alt="Ảnh thư gửi"
@@ -94,7 +93,7 @@ export default function RootLayout({
               width={400}
               height={400}
               priority
-              className="absolute md:top-[16%] z-[-1] md:left-[16%] md:w-[20vw] w-[clamp(160px,46vw,200px)] left-[10%] top-[34%] h-auto"
+              className="absolute md:top-[16%] md:left-[16%] md:w-[20vw] w-[clamp(160px,46vw,200px)] left-[10%] top-[34%] h-auto"
             />
             <Image
               alt="Ảnh thư gửi"
@@ -102,7 +101,7 @@ export default function RootLayout({
               width={600}
               height={600}
               priority
-              className="absolute md:top-[12%] z-[-1] md:right-[12%] md:w-[43vw] top-6 max-md:left-1/2 max-md:-translate-x-1/2 w-[clamp(240px,80%,460px)] h-auto"
+              className="absolute md:top-[12%] md:right-[12%] md:w-[43vw] top-6 max-md:left-1/2 max-md:-translate-x-1/2 w-[clamp(240px,80%,460px)] h-auto"
             />
 
             {children}
@@ -112,7 +111,7 @@ export default function RootLayout({
               width={1800}
               height={500}
               priority
-              className="absolute bottom-0 z-[-1] left-0 w-full h-auto max-h-[300px] min-h-[200px]"
+              className="absolute bottom-0 left-0 w-full h-auto max-h-[300px] min-h-[200px]"
             />
           </main>
         </FormProvider>

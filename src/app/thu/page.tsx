@@ -109,14 +109,13 @@ export default function Page() {
 
   return (
     <>
-      {/* Loading Overlay */}
       {isLoading && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 flex justify-center items-center z-50">
+        <div className="fixed top-0 left-0 w-full h-full bg-red-800 flex justify-center items-center z-50">
           <div className="w-16 h-16 border-4 border-red-600 border-t-4 border-t-transparent rounded-full animate-spin"></div>
         </div>
       )}
 
-      <div className="bg-white md:size-[clamp(180px,24vw,260px)] rounded-full absolute md:top-[42%] md:left-[16%] border-4 border-red-600 size-[clamp(160px,50vw,240px)] top-[12%] max-md:left-1/2 max-md:-translate-x-1/2">
+      <div className="bg-white  md:size-[clamp(180px,24vw,260px)] rounded-full absolute md:top-[42%] md:left-[16%] border-4 border-red-600 size-[clamp(160px,50vw,240px)] top-[12%] max-md:left-1/2 max-md:-translate-x-1/2">
         <div className="w-full h-full border-4 border-red-400 rounded-full overflow-hidden relative">
           <Image
             width={300}
@@ -128,7 +127,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="absolute md:right-[6%] md:top-[36%] pacifico max-md:left-1/2 max-md:-translate-x-1/2 top-[42%] bg-white border-4 border-red-600 rounded-3xl shadow w-[80%] h-[360px] md:w-1/2 p-6 flex flex-col justify-between">
+      <div className="absolute z-40 md:right-[6%] md:top-[36%] pacifico max-md:left-1/2 max-md:-translate-x-1/2 top-[42%] bg-white border-4 border-red-600 rounded-3xl shadow w-[80%] h-[360px] md:w-1/2 p-6 flex flex-col justify-between">
         <p className="capitalize">{longText}</p>
         <div className="flex items-center justify-between">
           <div ref={cameraRef}>
@@ -138,7 +137,7 @@ export default function Page() {
                 <div className="flex gap-2 flex-row-reverse">
                   <button
                     onClick={async () => {
-                      await handleCapture(1100, 800, "desktop.png");
+                      await handleCapture(1200, 900, "desktop.png");
                     }}
                     className="rounded-full size-10 border flex items-center justify-center transition-all bg-red-400 duration-500 shadow hover:scale-110 hover:bg-red-600 text-white"
                   >
