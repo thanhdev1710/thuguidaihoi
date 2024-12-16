@@ -109,9 +109,9 @@ export default function RootLayout({
               alt="Ảnh phụ"
               src="/images/bottomline.avif"
               width={1800}
-              height={500}
+              height={600}
               priority
-              className="absolute bottom-0 left-0 w-full h-auto max-h-[400px] min-h-[200px]"
+              className="absolute bottom-0 left-0 w-full min-h-[300px] max-h-[500px] object-fill"
             />
           </main>
         </FormProvider>
