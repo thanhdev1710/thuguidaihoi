@@ -86,7 +86,7 @@ export default function FormSubmit() {
   };
 
   return (
-    <div className="absolute md:right-[6%] md:top-[36%] max-md:left-1/2 max-md:-translate-x-1/2 top-[54%] bg-white p-4 rounded shadow w-[80%] md:w-1/2 border">
+    <div className="absolute md:right-[6%] md:top-[36%] z-30 max-md:left-1/2 max-md:-translate-x-1/2 top-[42%] bg-white p-4 rounded shadow w-[80%] md:w-1/2 border">
       <form onSubmit={handleSubmit}>
         {/* Tên */}
         <div className="mb-3">
@@ -101,7 +101,7 @@ export default function FormSubmit() {
             required
             value={ten}
             onChange={handleInputChange}
-            className="w-full border rounded px-2 py-1 focus:ring focus:ring-blue-300"
+            className="w-full border rounded px-2 py-1 focus:ring focus:ring-red-300"
           />
         </div>
 
@@ -149,7 +149,7 @@ export default function FormSubmit() {
             required
             value={chucVu}
             onChange={handleInputChange}
-            className="w-full border rounded px-2 py-1 focus:ring focus:ring-blue-300"
+            className="w-full border rounded px-2 py-1 focus:ring focus:ring-red-300"
           />
         </div>
 
@@ -166,7 +166,7 @@ export default function FormSubmit() {
             required
             value={longText}
             onChange={handleInputChange}
-            className="w-full border rounded px-2 py-1 focus:ring focus:ring-blue-300"
+            className="w-full border rounded px-2 py-1 focus:ring focus:ring-red-300"
           />
           <small className="text-gray-500 text-sm">{charCount}/500 kí tự</small>
         </div>
@@ -174,7 +174,7 @@ export default function FormSubmit() {
         {/* Nút submit */}
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-1 rounded hover:bg-blue-700"
+          className="w-full bg-red-600 text-white py-1 rounded hover:bg-red-700"
         >
           Xem trước
         </button>

@@ -40,8 +40,8 @@ export default function UploadImg() {
 
   return (
     <>
-      <div className="bg-white md:size-[clamp(180px,24vw,260px)] rounded-full absolute md:top-[42%] md:left-[16%] border-4 border-blue-600 size-[clamp(160px,50vw,240px)] top-[20%] max-md:left-1/2 max-md:-translate-x-1/2">
-        <div className="w-full h-full border-4 border-blue-400 rounded-full overflow-hidden relative">
+      <div className="bg-white md:size-[clamp(180px,24vw,260px)] rounded-full absolute md:top-[42%] md:left-[16%] border-4 border-red-600 size-[clamp(160px,54vw,200px)] top-[12%] max-md:left-1/2 max-md:-translate-x-1/2">
+        <div className="w-full h-full border-4 border-red-400 rounded-full overflow-hidden relative">
           <Image
             width={300}
             height={300}
@@ -111,7 +111,7 @@ export default function UploadImg() {
                 </button>
                 <button
                   onClick={handleCrop}
-                  className="px-4 py-2 bg-blue-500 text-white rounded-md"
+                  className="px-4 py-2 bg-red-500 text-white rounded-md"
                 >
                   Cắt
                 </button>

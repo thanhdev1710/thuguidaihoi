@@ -63,51 +63,51 @@ export default function RootLayout({
     <html lang="en">
       <body className={`antialiased ${pacifico.variable}`}>
         <FormProvider>
-          <main className="relative w-full text-black h-[860px] max-md:h-[1100px] overflow-hidden">
+          <main className="relative w-full text-black min-h-svh h-[900px] max-md:h-[1100px] overflow-hidden">
             <Image
-              src="/images/bg.webp"
+              src="/images/bg.png"
               alt="Ảnh nền"
               fill
               objectFit="cover"
               priority
-              className="absolute w-full h-full bg-cover object-cover"
+              className="absolute w-full h-full z-[-2]"
             />
             <Image
               alt="Ảnh phụ"
-              src="/images/topleft.webp"
+              src="/images/topleft.png"
               width={300}
               height={300}
               priority
-              className="absolute top-0 left-0 w-[18vw] h-auto"
+              className="absolute top-0 left-0 z-[-1] w-[clamp(80px,10vw,200px)] h-auto"
             />
             <Image
               alt="Ảnh phụ"
-              src="/images/topright.webp"
+              src="/images/topleft.png"
               width={300}
               height={300}
               priority
-              className="absolute top-0 right-0 w-[18vw] h-auto"
+              className="absolute top-0 right-0 z-[-1] w-[clamp(80px,10vw,200px)] h-auto scale-x-[-1]"
             />
             <Image
               alt="Ảnh thư gửi"
-              src="/images/thugui.webp"
+              src="/images/thugui.png"
               width={400}
               height={400}
               priority
-              className="absolute md:top-[16%] md:left-[16%] md:w-[20vw] w-[clamp(160px,40vw,200px)] left-[10%] top-[45%] h-auto"
+              className="absolute md:top-[16%] z-[-1] md:left-[16%] md:w-[20vw] w-[clamp(160px,46vw,200px)] left-[10%] top-[34%] h-auto"
             />
             <Image
               alt="Ảnh thư gửi"
-              src="/images/chaomung.webp"
+              src="/images/chaomung.png"
               width={600}
               height={600}
               priority
-              className="absolute md:top-[12%] md:right-[12%] md:w-[43vw] top-2 max-md:left-1/2 max-md:-translate-x-1/2 w-[70%] h-auto"
+              className="absolute md:top-[12%] z-[-1] md:right-[12%] md:w-[43vw] top-6 max-md:left-1/2 max-md:-translate-x-1/2 w-[clamp(240px,80%,460px)] h-auto"
             />
 
             {children}
 
-            <Image
+            {/* <Image
               alt="Ảnh phụ"
               src="/images/bottomleft.webp"
               width={300}
@@ -122,14 +122,14 @@ export default function RootLayout({
               height={300}
               priority
               className="absolute bottom-0 right-0 w-[29vw] h-auto"
-            />
+            /> */}
             <Image
               alt="Ảnh phụ"
-              src="/images/bottomline.webp"
-              width={900}
-              height={900}
+              src="/images/bottomline.png"
+              width={1800}
+              height={500}
               priority
-              className="absolute bottom-0 left-0 w-full"
+              className="absolute bottom-0 z-[-1] left-0 w-full h-auto max-h-[300px] min-h-[200px]"
             />
           </main>
         </FormProvider>
