@@ -111,7 +111,7 @@ export default function RootLayout({
               width={1800}
               height={600}
               priority
-              className="absolute bottom-10 left-0 w-[clamp(150px,40vw,300px)]"
+              className="absolute bottom-10 md:bottom-14 left-0 w-[clamp(150px,40vw,280px)]"
             />
             <Image
               alt="Ảnh phụ"
@@ -119,7 +119,7 @@ export default function RootLayout({
               width={1800}
               height={600}
               priority
-              className="absolute bottom-10 right-0 w-[clamp(150px,40vw,300px)]"
+              className="absolute bottom-10 md:bottom-14 right-0 w-[clamp(150px,40vw,280px)]"
             />
             <Image
               alt="Ảnh phụ"
@@ -127,7 +127,7 @@ export default function RootLayout({
               width={1800}
               height={600}
               priority
-              className="absolute bottom-0 right-0 w-full h-20"
+              className="absolute bottom-0 right-0 w-full h-[clamp(80px,20vw,140px)]"
             />
           </main>
         </FormProvider>
