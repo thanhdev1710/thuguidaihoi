@@ -177,7 +177,7 @@ export default function Page() {
           <div className="flex flex-col gap-1 text-red-600">
             <p className="flex gap-3 items-end ">
               <span className="text-sm lg:text-base font-semibold">
-                {xungHo}
+                Đồng chí
               </span>
               <span className="text-xl lg:text-2xl font-bold">
                 {ten
