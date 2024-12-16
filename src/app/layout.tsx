@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   keywords:
     "Đại hội Đại biểu, Hội Liên hiệp Thanh niên, Thành phố Hồ Chí Minh, thư gửi, đại biểu thanh niên, nhiệm kỳ 2024-2029, Đại hội IX, sự kiện thanh niên, Việt Nam, hội nghị thanh niên",
   icons: {
-    apple: "/images/icon.webp",
+    apple: "/images/icon.png",
   },
   openGraph: {
     url: "https://thuguidaihoidangbophuonghieptannhiemky2025-2030.vercel.app/",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       "Chuyên trang thư gửi Đại hội Đại biểu Hội Liên hiệp Thanh niên Việt Nam - Thành phố Hồ Chí Minh lần thứ IX, nhiệm kỳ 2024 – 2029",
     images: [
       {
-        url: "https://i.ibb.co/Pgxy998/card.webp",
+        url: "https://i.ibb.co/FKmCwsd/28-C25688-E51-D-4409-9-F1-B-B66691805439.jpg",
         width: 1200,
         height: 630,
         alt: "Đại hội Đại biểu Hội Liên hiệp Thanh niên Việt Nam - Thành phố Hồ Chí Minh",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
       "Chuyên trang thư gửi Đại hội Đại biểu Hội Liên hiệp Thanh niên Việt Nam - Thành phố Hồ Chí Minh lần thứ IX, nhiệm kỳ 2024 – 2029",
     images: [
       {
-        url: "https://i.ibb.co/Pgxy998/card.webp",
+        url: "https://i.ibb.co/FKmCwsd/28-C25688-E51-D-4409-9-F1-B-B66691805439.jpg",
         width: 1200,
         height: 630,
         alt: "Đại hội Đại biểu Hội Liên hiệp Thanh niên Việt Nam - Thành phố Hồ Chí Minh",
@@ -65,7 +65,7 @@ export default function RootLayout({
         <FormProvider>
           <main className="relative w-full text-black min-h-svh h-[900px] max-md:h-[1100px] overflow-hidden">
             <Image
-              src="/images/bg.png"
+              src="/images/bg.avif"
               alt="Ảnh nền"
               fill
               objectFit="cover"
@@ -74,7 +74,7 @@ export default function RootLayout({
             />
             <Image
               alt="Ảnh phụ"
-              src="/images/topleft.png"
+              src="/images/topleft.avif"
               width={300}
               height={300}
               priority
@@ -82,7 +82,7 @@ export default function RootLayout({
             />
             <Image
               alt="Ảnh phụ"
-              src="/images/topleft.png"
+              src="/images/topleft.avif"
               width={300}
               height={300}
               priority
@@ -90,7 +90,7 @@ export default function RootLayout({
             />
             <Image
               alt="Ảnh thư gửi"
-              src="/images/thugui.png"
+              src="/images/thugui.avif"
               width={400}
               height={400}
               priority
@@ -98,7 +98,7 @@ export default function RootLayout({
             />
             <Image
               alt="Ảnh thư gửi"
-              src="/images/chaomung.png"
+              src="/images/chaomung.avif"
               width={600}
               height={600}
               priority
@@ -106,26 +106,9 @@ export default function RootLayout({
             />
 
             {children}
-
-            {/* <Image
-              alt="Ảnh phụ"
-              src="/images/bottomleft.webp"
-              width={300}
-              height={300}
-              priority
-              className="absolute bottom-0 left-0 w-[29vw] h-auto"
-            />
             <Image
               alt="Ảnh phụ"
-              src="/images/bottomright.webp"
-              width={300}
-              height={300}
-              priority
-              className="absolute bottom-0 right-0 w-[29vw] h-auto"
-            /> */}
-            <Image
-              alt="Ảnh phụ"
-              src="/images/bottomline.png"
+              src="/images/bottomline.avif"
               width={1800}
               height={500}
               priority

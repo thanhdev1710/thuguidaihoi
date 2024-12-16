@@ -9,8 +9,7 @@ export default function Page() {
   const router = useRouter();
   const [isCamera, setIsCamera] = useState(false);
   const cameraRef = useRef<HTMLDivElement | null>(null);
-  const [isLoading, setIsLoading] = useState(false); // Thêm state để quản lý trạng thái loading
-  // Khai báo state để lưu thông tin từ sessionStorage
+  const [isLoading, setIsLoading] = useState(false);
   const [anh, setAnh] = useState<string | null>(null);
   const [chucVu, setChucVu] = useState<string | null>(null);
   const [longText, setLongText] = useState<string | null>(null);
@@ -18,16 +17,16 @@ export default function Page() {
   const [xungHo, setXungHo] = useState<string | null>(null);
 
   const handleCapture = async (width: number, height: number, name: string) => {
-    setIsLoading(true); // Bật trạng thái loading
+    setIsLoading(true);
 
     if (cameraRef.current) {
       cameraRef.current.style.opacity = "0";
     }
 
-    const originalWidth = window.innerWidth; // Lưu lại chiều rộng ban đầu của cửa sổ
-    const originalHeight = window.innerHeight; // Lưu lại chiều cao ban đầu của cửa sổ
-    const originalBodyWidth = document.body.style.width; // Lưu lại chiều rộng ban đầu của body
-    const originalBodyHeight = document.body.style.height; // Lưu lại chiều cao ban đầu của body
+    const originalWidth = window.innerWidth;
+    const originalHeight = window.innerHeight;
+    const originalBodyWidth = document.body.style.width;
+    const originalBodyHeight = document.body.style.height;
 
     try {
       document.body.style.width = `${width}px`;
@@ -56,7 +55,7 @@ export default function Page() {
       window.innerWidth = originalWidth;
       window.innerHeight = originalHeight;
 
-      setIsLoading(false); // Tắt trạng thái loading
+      setIsLoading(false);
       setIsCamera(false);
     }
   };
@@ -81,14 +80,12 @@ export default function Page() {
   };
 
   useEffect(() => {
-    // Lấy thông tin từ sessionStorage khi trang được tải
     const storedAnh = sessionStorage.getItem("anh");
     const storedChucVu = sessionStorage.getItem("chucVu");
     const storedLongText = sessionStorage.getItem("longText");
     const storedTen = sessionStorage.getItem("ten");
     const storedXungHo = sessionStorage.getItem("xungHo");
 
-    // Kiểm tra xem dữ liệu có tồn tại không
     if (
       storedAnh &&
       storedChucVu &&
@@ -102,14 +99,12 @@ export default function Page() {
       setTen(storedTen);
       setXungHo(storedXungHo);
     } else {
-      // Nếu có bất kỳ giá trị nào thiếu, điều hướng về trang chủ
       router.replace("/");
     }
   }, [router]);
 
-  // Nếu thông tin chưa được tải, có thể hiển thị loading hoặc trả về trang chủ
   if (!anh || !chucVu || !longText || !ten || !xungHo) {
-    return null; // Hoặc có thể hiển thị một thông báo loading
+    return null;
   }
 
   return (
