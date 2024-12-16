@@ -82,7 +82,7 @@ export default function FormSubmit() {
     const data = JSON.stringify(anh);
     if (data.length < 5 * 1024 * 1024) {
       // kiểm tra xem dữ liệu có dưới 5MB không
-      localStorage.setItem("anh", data);
+      sessionStorage.setItem("anh", data);
 
       router.push(`/thu`);
     } else {
