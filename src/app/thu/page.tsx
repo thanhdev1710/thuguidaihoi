@@ -139,7 +139,7 @@ export default function Page() {
                 <div className="flex gap-2 flex-row-reverse">
                   <button
                     onClick={async () => {
-                      await handleCapture(1600, 900, "desktop.png");
+                      await handleCapture(1600, 1000, "desktop.png");
                     }}
                     className="rounded-full size-10 border flex items-center justify-center transition-all bg-red-400 duration-500 shadow hover:scale-110 hover:bg-red-600 text-white"
                   >
