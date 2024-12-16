@@ -10,11 +10,11 @@ export default function FormSubmit() {
     setChucVu,
     setLongText,
     setTen,
-    setXungHo,
+    // setXungHo,
     chucVu,
     longText,
     ten,
-    xungHo,
+    // xungHo,
     anh,
   } = useFormContext();
 
@@ -32,11 +32,11 @@ export default function FormSubmit() {
           setTen(value);
         }
         break;
-      case "xungHo":
-        if (value.length <= 50) {
-          setXungHo(value);
-        }
-        break;
+      // case "xungHo":
+      //   if (value.length <= 50) {
+      //     setXungHo(value);
+      //   }
+      //   break;
       case "chucVu":
         if (value.length <= 50) {
           setChucVu(value);
@@ -63,9 +63,9 @@ export default function FormSubmit() {
     if (!ten) {
       errorMessage += "Tên là bắt buộc.\n";
     }
-    if (!xungHo) {
-      errorMessage += "Xưng hô là bắt buộc.\n";
-    }
+    // if (!xungHo) {
+    //   errorMessage += "Xưng hô là bắt buộc.\n";
+    // }
     if (!chucVu) {
       errorMessage += "Chức vụ là bắt buộc.\n";
     }
@@ -84,7 +84,7 @@ export default function FormSubmit() {
 
     // Lưu các giá trị vào sessionStorage
     sessionStorage.setItem("ten", ten);
-    sessionStorage.setItem("xungHo", xungHo);
+    // sessionStorage.setItem("xungHo", xungHo);
     sessionStorage.setItem("chucVu", chucVu);
     sessionStorage.setItem("longText", longText);
     const data = JSON.stringify(anh);
@@ -119,7 +119,7 @@ export default function FormSubmit() {
         </div>
 
         {/* Xưng hô */}
-        <div className="mb-3">
+        {/* <div className="mb-3">
           <label className="block text-sm font-medium mb-1">Xưng hô</label>
           <div className="flex space-x-4">
             <label className="flex items-center">
@@ -147,7 +147,7 @@ export default function FormSubmit() {
               Chị
             </label>
           </div>
-        </div>
+        </div> */}
 
         {/* Chức vụ */}
         <div className="mb-3">

@@ -14,7 +14,7 @@ export default function Page() {
   const [chucVu, setChucVu] = useState<string | null>(null);
   const [longText, setLongText] = useState<string | null>(null);
   const [ten, setTen] = useState<string | null>(null);
-  const [xungHo, setXungHo] = useState<string | null>(null);
+  // const [xungHo, setXungHo] = useState<string | null>(null);
 
   const handleCapture = async (width: number, height: number, name: string) => {
     setIsLoading(true);
@@ -84,26 +84,32 @@ export default function Page() {
     const storedChucVu = sessionStorage.getItem("chucVu");
     const storedLongText = sessionStorage.getItem("longText");
     const storedTen = sessionStorage.getItem("ten");
-    const storedXungHo = sessionStorage.getItem("xungHo");
+    // const storedXungHo = sessionStorage.getItem("xungHo");
 
     if (
       storedAnh &&
       storedChucVu &&
       storedLongText &&
-      storedTen &&
-      storedXungHo
+      storedTen
+      // && storedXungHo
     ) {
       setAnh(storedAnh);
       setChucVu(storedChucVu);
       setLongText(storedLongText);
       setTen(storedTen);
-      setXungHo(storedXungHo);
+      // setXungHo(storedXungHo);
     } else {
       router.replace("/");
     }
   }, [router]);
 
-  if (!anh || !chucVu || !longText || !ten || !xungHo) {
+  if (
+    !anh ||
+    !chucVu ||
+    !longText ||
+    !ten
+    // || !xungHo
+  ) {
     return null;
   }
 
