@@ -93,7 +93,7 @@ export default function RootLayout({
               width={400}
               height={400}
               priority
-              className="absolute md:top-[16%] md:left-[16%] md:w-[20vw] w-[clamp(160px,46vw,200px)] left-[10%] top-[34%] h-auto"
+              className="absolute md:top-[16%] md:left-[16%] md:w-[23vw] w-[clamp(160px,46vw,200px)] left-[10%] top-[34%] h-auto"
             />
             <Image
               alt="Ảnh thư gửi"
@@ -101,7 +101,7 @@ export default function RootLayout({
               width={600}
               height={600}
               priority
-              className="absolute md:top-[12%] md:right-[12%] md:w-[43vw] top-6 max-md:left-1/2 max-md:-translate-x-1/2 w-[clamp(240px,80%,460px)] h-auto"
+              className="absolute md:top-[12%] md:right-[12%] md:w-[46vw] top-6 max-md:left-1/2 max-md:-translate-x-1/2 w-[clamp(240px,80%,460px)] h-auto"
             />
 
             {children}
@@ -111,7 +111,7 @@ export default function RootLayout({
               width={1800}
               height={500}
               priority
-              className="absolute bottom-0 left-0 w-full h-auto max-h-[300px] min-h-[200px]"
+              className="absolute bottom-0 left-0 w-full h-auto max-h-[400px] min-h-[200px]"
             />
           </main>
         </FormProvider>

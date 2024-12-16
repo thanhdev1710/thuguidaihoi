@@ -115,7 +115,7 @@ export default function Page() {
         </div>
       )}
 
-      <div className="bg-white  md:size-[clamp(180px,24vw,260px)] rounded-full absolute md:top-[42%] md:left-[16%] border-4 border-red-600 size-[clamp(160px,50vw,240px)] top-[12%] max-md:left-1/2 max-md:-translate-x-1/2">
+      <div className="bg-white md:size-[clamp(180px,26vw,320px)] rounded-full absolute md:top-[36%] md:left-[16%] border-4 border-red-600 size-[clamp(160px,50vw,240px)] top-[12%] max-md:left-1/2 max-md:-translate-x-1/2">
         <div className="w-full h-full border-4 border-red-400 rounded-full overflow-hidden relative">
           <Image
             width={300}
@@ -137,7 +137,7 @@ export default function Page() {
                 <div className="flex gap-2 flex-row-reverse">
                   <button
                     onClick={async () => {
-                      await handleCapture(1200, 900, "desktop.png");
+                      await handleCapture(1600, 800, "desktop.png");
                     }}
                     className="rounded-full size-10 border flex items-center justify-center transition-all bg-red-400 duration-500 shadow hover:scale-110 hover:bg-red-600 text-white"
                   >
