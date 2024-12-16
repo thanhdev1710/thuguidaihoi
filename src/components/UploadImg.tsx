@@ -45,7 +45,7 @@ export default function UploadImg() {
           <Image
             width={300}
             height={300}
-            src={image || "/images/upload.webp"}
+            src={image || "/images/upload.avif"}
             alt="Uploaded"
             className={
               image
