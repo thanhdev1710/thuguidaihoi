@@ -28,17 +28,25 @@ export default function FormSubmit() {
     // Cập nhật các state tương ứng
     switch (name) {
       case "ten":
-        setTen(value);
+        if (value.length <= 50) {
+          setTen(value);
+        }
         break;
       case "xungHo":
-        setXungHo(value);
+        if (value.length <= 50) {
+          setXungHo(value);
+        }
         break;
       case "chucVu":
-        setChucVu(value);
+        if (value.length <= 50) {
+          setChucVu(value);
+        }
         break;
       case "longText":
-        setLongText(value);
-        setCharCount(value.length); // Cập nhật số ký tự
+        if (value.length <= 500) {
+          setLongText(value);
+          setCharCount(value.length); // Cập nhật số ký tự
+        }
         break;
       default:
         break;
