@@ -107,11 +107,27 @@ export default function RootLayout({
             {children}
             <Image
               alt="Ảnh phụ"
+              src="/images/bottomleft.avif"
+              width={1800}
+              height={600}
+              priority
+              className="absolute bottom-10 left-0 w-[clamp(150px,40vw,300px)]"
+            />
+            <Image
+              alt="Ảnh phụ"
+              src="/images/bottomright.avif"
+              width={1800}
+              height={600}
+              priority
+              className="absolute bottom-10 right-0 w-[clamp(150px,40vw,300px)]"
+            />
+            <Image
+              alt="Ảnh phụ"
               src="/images/bottomline.avif"
               width={1800}
               height={600}
               priority
-              className="absolute bottom-0 left-0 w-full min-h-[300px] max-h-[500px] object-fill"
+              className="absolute bottom-0 right-0 w-full h-20"
             />
           </main>
         </FormProvider>
