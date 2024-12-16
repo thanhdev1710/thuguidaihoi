@@ -40,7 +40,7 @@ export default function UploadImg() {
 
   return (
     <>
-      <div className="bg-white md:size-[clamp(180px,26vw,320px)] rounded-full absolute md:top-[36%] md:left-[16%] border-4 border-red-600 size-[clamp(160px,54vw,200px)] top-[12%] max-md:left-1/2 max-md:-translate-x-1/2">
+      <div className="bg-white md:size-[clamp(180px,26vw,320px)] rounded-full absolute md:top-[38%] md:left-[16%] border-4 border-red-600 size-[clamp(160px,54vw,200px)] top-[12%] max-md:left-1/2 max-md:-translate-x-1/2">
         <div className="w-full h-full border-4 border-red-400 rounded-full overflow-hidden relative">
           <Image
             width={300}
