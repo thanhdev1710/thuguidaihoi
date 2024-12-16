@@ -128,7 +128,7 @@ export default function Page() {
       </div>
 
       <div className="absolute z-40 md:right-[6%] md:top-[36%] pacifico max-md:left-1/2 max-md:-translate-x-1/2 top-[42%] bg-white border-4 border-red-600 rounded-3xl shadow w-[80%] h-[360px] md:w-1/2 p-6 flex flex-col justify-between">
-        <p className="capitalize">{longText}</p>
+        <p className="[word-spacing:3px] leading-8 text-lg">{longText}</p>
         <div className="flex items-center justify-between">
           <div ref={cameraRef}>
             {isCamera ? (
