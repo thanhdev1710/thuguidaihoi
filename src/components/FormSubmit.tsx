@@ -79,10 +79,15 @@ export default function FormSubmit() {
     sessionStorage.setItem("xungHo", xungHo);
     sessionStorage.setItem("chucVu", chucVu);
     sessionStorage.setItem("longText", longText);
-    sessionStorage.setItem("anh", anh!);
+    const data = JSON.stringify(anh);
+    if (data.length < 5 * 1024 * 1024) {
+      // kiểm tra xem dữ liệu có dưới 5MB không
+      localStorage.setItem("anh", data);
 
-    // Chuyển hướng đến trang khác
-    router.push(`/thu`);
+      router.push(`/thu`);
+    } else {
+      toast.error("Ảnh quá lớn vui lòng chọn ảnh nhỏ hơn");
+    }
   };
 
   return (
