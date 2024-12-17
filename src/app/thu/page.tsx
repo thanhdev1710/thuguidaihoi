@@ -133,13 +133,13 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="absolute z-40 md:right-[6%] md:top-[36%] open_Sans max-md:left-1/2 max-md:-translate-x-1/2 top-[42%] bg-white border-4 border-red-600 rounded-3xl shadow w-[80%] min-h-[360px] md:w-1/2 p-6 flex flex-col justify-between">
-        <p className="leading-8 text-lg text-[#0000ff] font-semibold">
+      <div className="absolute z-40 md:right-[6%] md:top-[36%] open_Sans max-md:left-1/2 max-md:-translate-x-1/2 top-[42%] bg-white border-4 border-red-600 rounded-3xl shadow w-[80%] min-h-[360px] md:w-1/2 md:p-6 p-4 flex flex-col justify-between">
+        <p className="leading-8 text-[#0000ff] font-semibold text-[clamp(10px,2vw,16px)]">
           {longText}
         </p>
         <div className="flex relative items-center justify-end">
           <div
-            className="absolute top-1/2 left-0 -translate-y-1/2"
+            className="absolute top-1/2 left-0 -translate-y-1/2 z-10 bg-white"
             ref={cameraRef}
           >
             {isCamera ? (
@@ -184,18 +184,20 @@ export default function Page() {
             )}
           </div>
           <div className="flex flex-col gap-1 text-red-600">
-            <p className="flex gap-3 items-end ">
-              <span className="text-sm font-semibold flex-shrink-0">
+            <p className="flex gap-3 items-end">
+              <span className="text-[clamp(10px,2vw,14px)] font-semibold flex-shrink-0">
                 Đồng chí
               </span>
-              <span className="text-xl font-bold">
+              <span className="font-bold text-[clamp(12px,3vw,18px)]">
                 {ten
                   .split(" ")
                   .map((s) => s[0].toUpperCase() + s.slice(1))
                   .join(" ")}
               </span>
             </p>
-            <p className="text-sm font-semibold">{chucVu}</p>
+            <p className="text-[clamp(10px,2vw,14px)] font-semibold">
+              {chucVu}
+            </p>
           </div>
         </div>
       </div>

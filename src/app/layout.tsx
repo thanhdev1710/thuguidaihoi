@@ -63,7 +63,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`antialiased ${open_Sans.variable}`}>
         <FormProvider>
-          <main className="relative w-full text-black min-h-svh h-[1000px] max-md:h-[1100px] overflow-hidden">
+          <main className="relative w-full text-black h-svh min-h-[1000px] max-md:min-h-[1100px] overflow-hidden">
             <Image
               src="/images/bg.avif"
               alt="Ảnh nền"
