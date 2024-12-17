@@ -134,13 +134,16 @@ export default function Page() {
       </div>
 
       <div className="absolute z-40 md:right-[6%] md:top-[36%] open_Sans max-md:left-1/2 max-md:-translate-x-1/2 top-[42%] bg-white border-4 border-red-600 rounded-3xl shadow w-[80%] min-h-[360px] md:w-1/2 p-6 flex flex-col justify-between">
-        <p className="[word-spacing:3px] leading-8 text-lg lg:leading-10 lg:text-2xl text-[#0000ff] font-semibold">
+        <p className="leading-8 text-lg text-[#0000ff] font-semibold">
           {longText}
         </p>
-        <div className="flex items-center justify-between">
-          <div ref={cameraRef}>
+        <div className="flex relative items-center justify-end">
+          <div
+            className="absolute top-1/2 left-0 -translate-y-1/2"
+            ref={cameraRef}
+          >
             {isCamera ? (
-              <div className="flex flex-col items-start justify-start gap-2">
+              <div className="flex flex-col items-start justify-start gap-2 bg-gray-100 p-2 rounded shadow">
                 <h3 className="font-sans font-bold">Chọn thiết bị chụp ảnh</h3>
                 <div className="flex gap-2 flex-row-reverse">
                   <button
@@ -153,7 +156,7 @@ export default function Page() {
                   </button>
                   <button
                     onClick={async () => {
-                      await handleCapture(600, 1100, "mobile.png");
+                      await handleCapture(760, 1100, "mobile.png");
                     }}
                     className="rounded-full size-10 border flex items-center justify-center transition-all bg-orange-400 duration-500 shadow hover:scale-110 hover:bg-orange-600 text-white"
                   >
@@ -182,17 +185,17 @@ export default function Page() {
           </div>
           <div className="flex flex-col gap-1 text-red-600">
             <p className="flex gap-3 items-end ">
-              <span className="text-sm lg:text-base font-semibold">
+              <span className="text-sm font-semibold flex-shrink-0">
                 Đồng chí
               </span>
-              <span className="text-xl lg:text-2xl font-bold">
+              <span className="text-xl font-bold">
                 {ten
                   .split(" ")
                   .map((s) => s[0].toUpperCase() + s.slice(1))
                   .join(" ")}
               </span>
             </p>
-            <p className="text-sm lg:text-base font-semibold">{chucVu}</p>
+            <p className="text-sm font-semibold">{chucVu}</p>
           </div>
         </div>
       </div>
