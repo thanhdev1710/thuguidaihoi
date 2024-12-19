@@ -134,7 +134,7 @@ export default function Page() {
       </div>
 
       <div className="absolute z-40 md:right-[6%] md:top-[36%] open_Sans max-md:left-1/2 max-md:-translate-x-1/2 top-[42%] bg-white border-4 border-red-600 rounded-3xl shadow w-[80%] min-h-[360px] md:w-1/2 md:p-6 p-4 flex flex-col justify-between">
-        <p className="leading-8 text-[#0000ff] font-semibold text-[clamp(12px,2vw,16px)]">
+        <p className="text-[#0000ff] font-semibold text-[clamp(12px,2vw,16px)]">
           {longText}
         </p>
         <div className="flex relative items-center justify-end">
@@ -184,7 +184,7 @@ export default function Page() {
             )}
           </div>
           <div className="flex flex-col gap-1 text-red-600">
-            <p className="flex gap-3 items-end">
+            <p className="flex gap-2 items-end">
               <span className="text-[clamp(10px,2vw,14px)] font-semibold flex-shrink-0">
                 Đồng chí
               </span>
